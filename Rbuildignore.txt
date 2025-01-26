@@ -1,0 +1,3 @@
+^epigenoproteomics\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$

@@ -1,0 +1,142 @@
+round(2.4)
+round(2.6)
+prob::setdiff(c(1,2,3),c(1))
+getwd()
+stats::cor()
+NPGene_xor_values
+load("/oak/stanford/scg/lab_mpsnyder/asanghi/data/THCA_AK/results/revisions/input_example.rda")
+devtools::use_data(Peak_annotation)
+library(devtools)
+devtools::use_data(Peak_annotation)
+usethis::use_data(Peak_annotation)
+usethis::use_data(PeakCount_NonPromoter)
+usethis::use_data(ProteinCount_Matched,TranscriptCount_Matched,orderSamples)
+usethis::use_package("dplyr")
+usethis::use_package("prob")
+usethis::use_package("stats")
+usethis::use_package("lme4")
+version(prob)
+print(sessionInfo())
+devtools::document()
+devtools::document()
+devtools::load_all()
+test1 <- randomize(orderSamples)
+library(dplyr)
+library(stats)
+library(lme4)
+library(prob)
+test1 <- randomize(orderSamples)
+test1 <- randomize(orderSamples)
+test1 <- randomize(orderSamples)
+devtools::load_all()
+test1 <- randomize(orderSamples)
+test1 <- randomize(orderSamples)
+devtools::load_all()
+test1 <- randomize(orderSamples)
+devtools::load_all()
+test1 <- randomize(orderSamples)
+test1
+test2 <- graphcorrelation(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,filter(test1,randomized=="graph")$sample)
+test1
+test2 <- graphcorrelation(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,filter(test1,randomized==graph)$sample)
+colnames(test1)
+filter(test1,randomized==graph)
+dplyr::filter(test1,randomized==graph)
+summarize(group_by(test1,randomized),count=n())
+dplyr::filter(test1,randomized=="graph")
+test2 <- graphcorrelation(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,filter(test1,randomized=="graph")$sample)
+test2 <- graphcorrelation(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="graph")$sample)
+test2
+dplyr::tibble(samples=graphSamples)
+dplyr::filter(test1,randomized=="graph")$sample
+devtools::load_all()
+test2 <- graphcorrelation(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="graph")$sample)
+devtools::load_all()
+test2 <- graphcorrelation(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="graph")$sample)
+test2
+gp62=ggplot(PromGene_xor_values_test, aes(x=transPromXor, y=transProtXor)) + facet_grid(Status ~ Exp) +
+geom_bin2d(bins = 45) +
+scale_fill_continuous(type = "viridis") +
+theme_bw() +
+labs(y="Protein-Transcript Correlation (Spearman)", x ="Transcript-Non-Promoter Correlation (Spearman)",fill="Number of\nNon-Promoter-Gene\nPairs", size=12) +
+ggtitle("Correlation of Proteins and Transcripts\nbased on Differential Non-Promoter Activity") +
+theme(legend.position='right') +
+theme(axis.text.x = element_text(colour="black", size=14, angle=0, hjust=0.5, vjust=0.5, face="plain"),
+axis.text.y = element_text(colour="black", size=14, angle=0, hjust=0.5, vjust=0.5, face="plain"),
+axis.title.x = element_text(colour="black", size=14, angle=0, hjust=.3, vjust=0.5, face="plain"),
+axis.title.y = element_text(colour="black", size=14, angle=90, hjust=.5, vjust=.5, face="plain"),
+panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+legend.title = element_text(size=12,face="bold"),
+legend.text=element_text(size=12,face="plain"),
+strip.text.x = element_text(size = 10.3,angle = 0),
+strip.text.y = element_text(size = 10.3,angle = 270),
+plot.title = element_blank()) +
+geom_vline(aes(xintercept=0.5), linetype = "dashed") +
+geom_hline(aes(yintercept=0.5), linetype = "dashed")
+gp62
+ggsave("Promoter_subsettingDiffActivity_Spearman_subSampled.png", w = 7, h = 5)
+library(ggplot2)
+getwd()
+gp62=ggplot(test2, aes(x=TranscriptPeakXor, y=TranscriptProteinXor)) + facet_grid(Status) +
+geom_bin2d(bins = 45) +
+scale_fill_continuous(type = "viridis") +
+theme_bw() +
+labs(y="Protein-Transcript Correlation (Spearman)", x ="Transcript-Non-Promoter Correlation (Spearman)",fill="Number of\nNon-Promoter-Gene\nPairs", size=12) +
+ggtitle("Correlation of Proteins and Transcripts\nbased on Differential Non-Promoter Activity") +
+theme(legend.position='right') +
+theme(axis.text.x = element_text(colour="black", size=14, angle=0, hjust=0.5, vjust=0.5, face="plain"),
+axis.text.y = element_text(colour="black", size=14, angle=0, hjust=0.5, vjust=0.5, face="plain"),
+axis.title.x = element_text(colour="black", size=14, angle=0, hjust=.3, vjust=0.5, face="plain"),
+axis.title.y = element_text(colour="black", size=14, angle=90, hjust=.5, vjust=.5, face="plain"),
+panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+legend.title = element_text(size=12,face="bold"),
+legend.text=element_text(size=12,face="plain"),
+strip.text.x = element_text(size = 10.3,angle = 0),
+strip.text.y = element_text(size = 10.3,angle = 270),
+plot.title = element_blank()) +
+geom_vline(aes(xintercept=0.5), linetype = "dashed") +
+geom_hline(aes(yintercept=0.5), linetype = "dashed")
+gp62
+ggsave("/oak/stanford/scg/lab_mpsnyder/asanghi/data/THCA_AK/results/revisions/test2.png", w = 7, h = 5)
+gp62=ggplot(test2, aes(x=TranscriptPeakXor, y=TranscriptProteinXor)) +
+geom_bin2d(bins = 45) +
+scale_fill_continuous(type = "viridis") +
+theme_bw() +
+labs(y="Protein-Transcript Correlation (Spearman)", x ="Transcript-Non-Promoter Correlation (Spearman)",fill="Number of\nNon-Promoter-Gene\nPairs", size=12) +
+ggtitle("Correlation of Proteins and Transcripts\nbased on Differential Non-Promoter Activity") +
+theme(legend.position='right') +
+theme(axis.text.x = element_text(colour="black", size=14, angle=0, hjust=0.5, vjust=0.5, face="plain"),
+axis.text.y = element_text(colour="black", size=14, angle=0, hjust=0.5, vjust=0.5, face="plain"),
+axis.title.x = element_text(colour="black", size=14, angle=0, hjust=.3, vjust=0.5, face="plain"),
+axis.title.y = element_text(colour="black", size=14, angle=90, hjust=.5, vjust=.5, face="plain"),
+panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+legend.title = element_text(size=12,face="bold"),
+legend.text=element_text(size=12,face="plain"),
+strip.text.x = element_text(size = 10.3,angle = 0),
+strip.text.y = element_text(size = 10.3,angle = 270),
+plot.title = element_blank()) +
+geom_vline(aes(xintercept=0.5), linetype = "dashed") +
+geom_hline(aes(yintercept=0.5), linetype = "dashed")
+gp62
+ggsave("/oak/stanford/scg/lab_mpsnyder/asanghi/data/THCA_AK/results/revisions/test2.png", w = 7, h = 5)
+test3 <- graphcorrelation(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="test")$sample)
+test3
+test3 <- predictprotein(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="test")$sample)
+devtools::document()
+devtools::load_all()
+test3 <- predictprotein(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="test")$sample)
+devtools::load_all()
+test3 <- predictprotein(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="test")$sample)
+devtools::load_all()
+test3 <- predictprotein(Peak_annotation,PeakCount_NonPromoter,TranscriptCount_Matched,ProteinCount_Matched,orderSamples,dplyr::filter(test1,randomized=="test")$sample)
+test3
+filter(test3, lm_Ftest<0.05)
+dplyr::filter(test3, lm_Ftest<0.05)
+dplyr::filter(test3, lm_Ftest<0.05,status=="All")
+dplyr::filter(test3, lm_Ftest<0.05,status=="DiffPeak")
+dplyr::filter(test3,status=="DiffPeak")
+dplyr::filter(test3, status=="All")
+dplyr::filter(test3,status=="DiffExp")
+dplyr::filter(test3,lm_Ftest<0.05,status=="DiffExp")
+devtools::document()
+file.exists("~/.ssh/id_rsa.pub")
