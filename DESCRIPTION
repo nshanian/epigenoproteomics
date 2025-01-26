@@ -1,19 +1,6 @@
 Package: epigenoproteomics
 Title: A statistical method to identify genes with protein abundance that correlates with RNA abundance and chromatin accessibility
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "Akshay",
-           family = "Sanghi",
-           role = c("aut","cre"),
-           email = "asanghi@stanford.edu",
-           comment = c(ORCID = "0000-0003-3568-5348"))
-Description: A statistical method to identify genes with protein abundance that correlates with RNA abundance and chromatin accessibility in R. 
-It uses a linear model test to assess the probability that the associated chromatin site and RNA expression predict the protein expression 
-of the given genes expression and their predicted regulatory elements. 
-The first step randomizes the samples into two sets one used for visualization of correlation, and the other used in the linear model. 
-The other two functions implement the statistic approach to quantify 
-1) the correlation between the pairs of information (RNA-protein and RNA-chromatin) 
-2) the protein predictive significance, which is a linear model test.  
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -25,5 +12,4 @@ Imports:
     prob,
     dplyr,
     stats
-URL: https://github.com/asanghi7/epigenoproteomics
-BugReports: https://github.com/asanghi7/epigenoproteomics/issues
+
